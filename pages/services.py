@@ -15,20 +15,20 @@ class PageParser(HTMLParser):
         self.links = []
 
     def counter(self, tag, attrs):
-        if tag == 'h1':
+        if tag == "h1":
             self.title += 1
-        elif tag == 'h2':
+        elif tag == "h2":
             self.subtitle += 1
-        elif tag == 'h3':
+        elif tag == "h3":
             self.content += 1
-        elif tag == 'a':
+        elif tag == "a":
             for attr in attrs:
-                if attr[0] == 'href':
+                if attr[0] == "href":
                     self.links.append(attr[1])
 
 
 def parse_page(url):
-    """"
+    """ "
     Метод для парсинга страницы по URL
     """
 
