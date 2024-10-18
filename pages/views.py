@@ -1,6 +1,7 @@
 from django.core.exceptions import ObjectDoesNotExist
 from django.http import JsonResponse
 from rest_framework.decorators import api_view
+
 from pages.models import Page
 from pages.services import parse_page
 
